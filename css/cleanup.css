@@ -1,1 +1,51 @@
-/* write your override styles here */
+div#wall .tag-1 {
+  display: none;
+}
+
+div#wall #tag-2 {
+  display: none;
+}
+
+div#wall #tag-3.slick.wicked{
+  display: none;
+}
+ #wall .parent #tag-4 {
+  display: none;
+}
+
+div#wall .parent + .parent #tag-5.slick {
+  display: none;
+}
+
+body div#wall div.parent div:last-child div#tag-6 {
+  display: none;
+}
+
+
+/* Possible to do it without: 
+
+#wall .parent #tag-4 {
+  display: none;
+}
+
+div#wall .parent + .parent #tag-5.slick {
+  display: none;
+}
+
+body div#wall div.parent div:last-child div#tag-6 {
+  display: none;
+  
+  And ONLY with :
+  
+div ~ .parent {
+  display: none;
+}
+
+as a change for code ABOVE 
+
+but test require 300 bytes worth of updates */
+
+div ~ .parent {
+  display: none;
+}
+
